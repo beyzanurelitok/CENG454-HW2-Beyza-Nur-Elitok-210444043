@@ -1,6 +1,6 @@
 // FlightController.cs
 // CENG 454 – HW1: Sky-High Prototype
-// Author: Beyza Nur Elitok | Student ID: 210444043
+// Beyza Nur Elitok | Student ID: 210444043
 
 using UnityEngine;
 
