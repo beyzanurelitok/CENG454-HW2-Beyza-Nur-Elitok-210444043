@@ -1,6 +1,6 @@
 // DangerZoneController.cs
 // CENG 454 - HW2 Midterm
-// Beyza Nur Elitok | Student ID: 210444043
+// Author : Beyza Nur Elitok | Student ID: 210444043
 
 using UnityEngine;
 using System.Collections;
@@ -23,6 +23,8 @@ public class DangerZoneController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //Debug.Log("Trigger hit by: " + other.name + " | Tag: " + other.tag);
+
         if (other.CompareTag("Player"))
         {
             if (activeCountdown != null)

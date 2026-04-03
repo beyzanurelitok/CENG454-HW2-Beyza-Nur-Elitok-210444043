@@ -1,6 +1,6 @@
 // FlightExamManager.cs
 // CENG 454 - HW2 Midterm
-// Beyza Nur Elitok | Student ID: 210444043
+// Author : Beyza Nur Elitok | Student ID: 210444043
 
 using UnityEngine;
 using TMPro;
