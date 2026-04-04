@@ -37,4 +37,12 @@ public class FlightExamManager : MonoBehaviour
     {
         return threatCleared;
     }
+
+    public void OnMissileHit()
+    {
+        threatCleared = false;
+        inDangerZone = false;
+        hudWarningText.text = "Hit! Return to danger zone...";
+        hudWarningText.color = Color.yellow;
+    }
 }
