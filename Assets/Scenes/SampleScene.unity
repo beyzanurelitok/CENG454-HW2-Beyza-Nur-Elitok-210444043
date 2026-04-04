@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 586147362}
   - component: {fileID: 586147361}
   - component: {fileID: 586147360}
+  - component: {fileID: 586147364}
   m_Layer: 0
   m_Name: runway
   m_TagString: TakeoffArea
@@ -328,7 +329,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -402,6 +403,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 39.437, z: 0}
+--- !u!114 &586147364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586147359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40fd6d39d428364bbc0163751f8aa36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examManager: {fileID: 1972177958}
 --- !u!1 &656483487
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +870,7 @@ GameObject:
   - component: {fileID: 1072333452}
   - component: {fileID: 1072333451}
   - component: {fileID: 1072333450}
+  - component: {fileID: 1072333454}
   m_Layer: 0
   m_Name: LandingStrip
   m_TagString: LandingArea
@@ -878,7 +893,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -952,6 +967,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 39.437, z: 0}
+--- !u!114 &1072333454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072333449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986ded9d56ee5224bbf3bcad3aa0bbe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  examManager: {fileID: 1972177958}
 --- !u!1 &1089634910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,8 +1083,8 @@ Transform:
   m_GameObject: {fileID: 1089634910}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.2, y: 70.8315, z: 141.0389}
-  m_LocalScale: {x: 149.80048, y: 107.31472, z: 170.36526}
+  m_LocalPosition: {x: 81.7413, y: 39.2315, z: 86.371}
+  m_LocalScale: {x: 134.87274, y: 33.21646, z: 61.02484}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1239,7 +1267,7 @@ Transform:
   m_GameObject: {fileID: 1552768386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.2, y: 70.8315, z: 141.0389}
+  m_LocalPosition: {x: 81.7413, y: 39.2315, z: 86.371}
   m_LocalScale: {x: 149.80048, y: 153.65796, z: 266.27893}
   m_ConstrainProportionsScale: 0
   m_Children: []
