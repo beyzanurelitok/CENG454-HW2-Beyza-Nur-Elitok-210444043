@@ -8,37 +8,41 @@ using System.Collections;
 public class DangerZoneController : MonoBehaviour
 {
     [SerializeField] private FlightExamManager examManager;
+    [SerializeField] private MissileLauncher missileLauncher;
     [SerializeField] private float missileDelay = 5f;
 
     private Coroutine activeCountdown;
+    private Transform playerTransform;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            examManager.EnterDangerZone();
-            activeCountdown = StartCoroutine(MissileCountdown());
-        }
+        if (!other.CompareTag("Player")) return;
+        
+        playerTransform = other.transform;
+        examManager.EnterDangerZone();
+        activeCountdown = StartCoroutine(MissileCountdown());
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
         //Debug.Log("Trigger hit by: " + other.name + " | Tag: " + other.tag);
 
-        if (other.CompareTag("Player"))
-        {
+        if (!other.CompareTag("Player")) return;
+        
             if (activeCountdown != null)
             {
                 StopCoroutine(activeCountdown);
                 activeCountdown = null;
             }
+            missileLauncher.DestroyActiveMissile();
             examManager.ExitDangerZone();
-        }
+
     }
 
     private IEnumerator MissileCountdown()
     {
         yield return new WaitForSeconds(missileDelay);
-        Debug.Log("Missile launching!");
+        missileLauncher.Launch(playerTransform);
     }
 }
