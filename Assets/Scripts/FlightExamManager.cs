@@ -8,6 +8,9 @@ using TMPro;
 public class FlightExamManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text hudWarningText;
+    [SerializeField] private AudioSource warningAudio;
+    [SerializeField] private AudioSource hitAudio;
+    [SerializeField] private AudioSource successAudio;
 
     //private bool inDangerZone = false;
     private bool hasTakenOff = false;
@@ -27,6 +30,7 @@ public class FlightExamManager : MonoBehaviour
         //inDangerZone = true;
         hudWarningText.text = "Entered a Dangerous Zone!";
         hudWarningText.color = Color.red;
+        if (warningAudio != null) warningAudio.Play();
     }
 
     public void ExitDangerZone()
@@ -35,6 +39,7 @@ public class FlightExamManager : MonoBehaviour
         threatCleared = true;
         hudWarningText.text = "Zone Cleared! Find a safe landing.";
         hudWarningText.color = Color.green;
+        if (successAudio != null) successAudio.Play();
     }
 
     //public void ClearHUD()
@@ -53,6 +58,7 @@ public class FlightExamManager : MonoBehaviour
         //inDangerZone = false;
         hudWarningText.text = "Hit! Return to danger zone...";
         hudWarningText.color = Color.yellow;
+        if (hitAudio != null) hitAudio.Play();
     }
     public void TryLand()
     {
@@ -75,6 +81,7 @@ public class FlightExamManager : MonoBehaviour
         missionComplete = true;
         hudWarningText.text = "Mission Complete! Safe landing!";
         hudWarningText.color = Color.cyan;
+        if (successAudio != null) successAudio.Play();
     }
 
     public bool IsThreatCleared() => threatCleared;
